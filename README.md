@@ -123,7 +123,7 @@ Stock-Flow-API/
 
 ```
 <div align="center">
-## 👨‍💻 Autor
+👨‍💻 Autor
 </div>
 
 <div align="center">
