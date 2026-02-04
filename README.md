@@ -121,15 +121,24 @@ Stock-Flow-API/
 ├── stock.db          # Banco de Dados (Gerado automaticamente)
 └── requirements.txt  # Lista de dependências
 
-👨‍💻 Autor
-<div align="center">
+## 👨‍💻 Autor
 
-Hiann Alexander Mendes de Oliveira
+<p align="center">
+  <strong>Hiann Alexander Mendes de Oliveira</strong>
+</p>
 
-🎓 Estudante de Sistemas de Informação - IF Goiano (Campus Urutaí)
+<p align="center">
+  🎓 Estudante de Sistemas de Informação — IF Goiano (Campus Urutaí)<br>
+  💻 Desenvolvedor Backend & Entusiasta de Inteligência Artificial<br>
+  📍 Pires do Rio, Goiás — Brasil
+</p>
 
-💻 Desenvolvedor Backend & Entusiasta de IA
+---
 
-📍 Pires do Rio, Goiás
+## 📬 Contato
 
-</div>
+<p align="center">
+  <a href="https://www.linkedin.com/in/hiann-alexander" target="_blank">
+    <img src="https://img.shields.io/badge/LinkedIn-Hiann%20Alexander-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"/>
+  </a>
+</p>
