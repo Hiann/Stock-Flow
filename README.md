@@ -121,7 +121,7 @@ Stock-Flow-API/
 ├── stock.db          # Banco de Dados (Gerado automaticamente)
 └── requirements.txt  # Lista de dependências
 
-```text
+```
 
 ## 👨‍💻 Autor
 
