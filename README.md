@@ -122,8 +122,9 @@ Stock-Flow-API/
 └── requirements.txt  # Lista de dependências
 
 ```
-
+<div align="center">
 ## 👨‍💻 Autor
+</div>
 
 <div align="center">
 
