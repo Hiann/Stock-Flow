@@ -1,0 +1,1 @@
+# Este arquivo faz com que a pasta 'app' seja tratada como um módulo Python.

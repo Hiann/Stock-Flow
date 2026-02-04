@@ -1,0 +1,88 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h2 class="fw-bold mb-0">Visão Geral</h2>
+    <a href="/reports/export" class="btn btn-success d-flex align-items-center gap-2">
+        <i class="bi bi-file-earmark-spreadsheet-fill"></i> Baixar Relatório (CSV)
+    </a>
+</div>
+
+<div class="row g-4 mb-4">
+    <div class="col-md-6 col-lg-4">
+        <div class="card card-custom p-3 h-100 d-flex flex-row align-items-center">
+            <div class="card-icon bg-primary bg-opacity-25 text-primary me-3">
+                <i class="bi bi-box-seam fs-3"></i>
+            </div>
+            <div>
+                <h6 class="text-muted-custom mb-1">Total de Produtos</h6>
+                <h3 class="fw-bold mb-0" id="total-products-count">...</h3>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-6 col-lg-4">
+        <div class="card card-custom p-3 h-100 d-flex flex-row align-items-center">
+            <div class="card-icon bg-success bg-opacity-25 text-success me-3">
+                <i class="bi bi-currency-dollar fs-3"></i>
+            </div>
+            <div>
+                <h6 class="text-muted-custom mb-1">Valor em Estoque</h6>
+                <h3 class="fw-bold mb-0" id="total-stock-value">...</h3>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row g-4">
+    <div class="col-lg-8">
+        <div class="card card-custom mb-4">
+            <div class="card-header bg-transparent border-bottom border-secondary py-3">
+                <h5 class="card-title mb-0 fw-bold">Nível de Estoque (Top 10)</h5>
+            </div>
+            <div class="card-body">
+                <canvas id="stockChart" style="max-height: 300px;"></canvas>
+            </div>
+        </div>
+
+        <div class="card card-custom">
+            <div class="card-header bg-transparent border-bottom border-secondary py-3">
+                <h5 class="card-title mb-0 fw-bold text-primary">
+                    <i class="bi bi-activity me-2"></i> Atividades Recentes
+                </h5>
+            </div>
+            <div class="card-body p-0">
+                <div class="list-group list-group-flush" id="recent-activity-list">
+                    <div class="p-3 text-center text-muted">Carregando feed...</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-4">
+        <div class="card card-custom h-100">
+            <div class="card-header bg-transparent border-bottom border-secondary py-3">
+                <h5 class="card-title mb-0 fw-bold text-danger" id="stock-alert-header">
+                    <i class="bi bi-exclamation-triangle-fill me-2"></i> Alerta: Repor
+                </h5>
+            </div>
+            <div class="card-body p-0">
+                <div class="table-responsive">
+                    <table class="table table-custom table-hover align-middle mb-0">
+                        <thead>
+                            <tr>
+                                <th>Produto</th>
+                                <th>Qtd</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody id="low-stock-table-body">
+                            <tr><td colspan="3" class="text-center py-3">Carregando...</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

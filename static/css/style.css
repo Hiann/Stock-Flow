@@ -1,0 +1,118 @@
+/* --- VARIAVEIS DE TEMA (O Segredo do Light/Dark Mode) --- */
+:root {
+    /* Padrão Dark (Valores iniciais) */
+    --primary-color: #0d6efd;
+    --bg-body: #1f2937;       /* Fundo escuro */
+    --bg-card: #111827;       /* Card quase preto */
+    --text-main: #e5e7eb;     /* Texto claro */
+    --text-muted: #9ca3af;
+    --border-color: #374151;
+    --sidebar-bg: #111827;
+}
+
+/* Quando o atributo data-bs-theme for "light" */
+[data-bs-theme="light"] {
+    --bg-body: #f3f4f6;       /* Cinza bem clarinho */
+    --bg-card: #ffffff;       /* Branco */
+    --text-main: #1f2937;     /* Texto escuro */
+    --text-muted: #6b7280;
+    --border-color: #e5e7eb;
+    --sidebar-bg: #ffffff;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-body);
+    color: var(--text-main);
+    transition: background-color 0.3s, color 0.3s; /* Animação suave na troca */
+}
+
+/* Sidebar */
+.sidebar-custom {
+    border-right: 1px solid var(--border-color);
+    background-color: var(--sidebar-bg) !important;
+    transition: background-color 0.3s;
+}
+
+.sidebar-custom .nav-link {
+    color: var(--text-muted);
+}
+
+.sidebar-custom .nav-link:hover, .sidebar-custom .nav-link.active {
+    color: var(--primary-color) !important; /* Sempre azul no hover */
+    background-color: rgba(13, 110, 253, 0.1); /* Azulzinho transparente */
+}
+
+.sidebar-title {
+    color: var(--text-main) !important;
+}
+
+/* Conteúdo */
+.content-area {
+    padding: 30px;
+}
+
+/* Cards */
+.card-custom {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.card-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Textos Genéricos */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--text-main);
+}
+
+.text-muted-custom {
+    color: var(--text-muted) !important;
+}
+
+/* Tabelas */
+.table-custom {
+    --bs-table-bg: var(--bg-card);
+    --bs-table-color: var(--text-main);
+    --bs-table-border-color: var(--border-color);
+}
+
+.table-custom th {
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.05em;
+    color: var(--text-muted);
+}
+
+/* Inputs e Modais no Dark Mode (Bootstrap adjustments) */
+[data-bs-theme="dark"] .form-control, 
+[data-bs-theme="dark"] .form-select {
+    background-color: #374151;
+    border-color: #4b5563;
+    color: white;
+}
+
+[data-bs-theme="dark"] .modal-content {
+    background-color: #1f2937;
+    border-color: #374151;
+}
+
+/* Badges */
+.badge-stock-ok { background-color: #059669; color: white; }
+.badge-stock-low { background-color: #dc2626; color: white; animation: pulse 2s infinite; }
+
+@keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.7; }
+    100% { opacity: 1; }
+}
